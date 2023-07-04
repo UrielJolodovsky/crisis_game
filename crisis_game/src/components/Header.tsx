@@ -2,19 +2,13 @@
 import React, { useState } from 'react'
 
 const Header = () => {
-    const [dinero, setDinero] = useState(1000000)
-    const [fecha, setFecha] = useState()
+    const [fecha, setFecha] = useState('1 de Enero de 2023')
   return (
-        <div className="w-full h-24 bg-blue-500 py-4">
-            <div className="container mx-auto px-4 flex justify-between items-center">
-                <div>
-                    <h2 className="text-2xl font-semibold text-black">
-                        Contador: ${dinero}
-                    </h2>
-                </div>
-                <div className='ml-3'>
-                    <h2 className="text-2xl font-semibold text-black">
-                        Fecha: {fecha}
+        <div className="w-full h-24 bg-blue align-middle pt-4">
+            <div className="container mx-auto flex justify-around items-center">
+                <div className='border-solid border-2 rounded-lg align-middle hover:scale-110 cursor-pointer'>
+                    <h2 className="text-2xl font-semibold text-black p-3">
+                        {fecha}
                     </h2>
                 </div>
             </div>
