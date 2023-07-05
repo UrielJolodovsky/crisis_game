@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 const Header = () => {
-    const [fecha, setFecha] = useState('1 de Enero de 2023')
+    const [fecha, setFecha] = useState('6 de Julio de 2023')
   return (
         <div className="w-full h-24 bg-blue align-middle pt-4">
             <div className="container mx-auto flex justify-around items-center">
