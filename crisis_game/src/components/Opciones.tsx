@@ -133,7 +133,7 @@ const Global = () => {
           {
             fecha: "7 de Mayo de 2024",
             titulo: "Evaluación de la eficiencia de los departamentos",
-            pregunta: "Te enfrentas a una situación difícil en la que debes reducir la plantilla de empleados. Resulta que tu mejor amigo Marcelo Ranzoni trabaja en una sección ineficiente de la empresa y su desempeño afecta negativamente nuestra productividad y resultados. ¿Qué decisión tomas?",
+            pregunta: "Te enfrentas a una situación difícil en la que debes reducir la plantilla de empleados. Tu mejor amigo Marcelo Ranzoni trabaja en una sección ineficiente de la empresa y su desempeño afecta negativamente nuestra productividad. ¿Qué decisión tomas?",
             opcionA: "Priorizo la eficiencia y el bienestar de la empresa, y procedo con el despido de mi mejor amigo, aunque sea una decisión dolorosa.",
             opcionB: "Decido darle una oportunidad más a mi amigo y lo traslado a otro departamento en el que pueda mejorar su desempeño.",
             opcionC: "Me niego a despedir a Ranzo, por lo que decido bajarle el sueldo así sigue trabajando para la empresa."
@@ -250,13 +250,19 @@ const handleOpcionA = () => {
     setNumSituacion(numSituacion + 1);
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["A"][0]);
-    setEmpleados(empleados + variaciones[numSituacion]["A"][1])
-    if (empleados < 0) {
+    if (empleados + variaciones[numSituacion]["A"][1] < 0) {
         setEmpleados(0)
     }
-    setInversores(inversores + variaciones[numSituacion]["A"][2])
-    if (inversores < 0) {
+    else
+    {
+        setEmpleados(empleados + variaciones[numSituacion]["A"][1])
+    }
+    if (inversores + variaciones[numSituacion]["A"][2] < 0) {
         setInversores(0)
+    }
+    else
+    {
+        setInversores(inversores + variaciones[numSituacion]["A"][2])
     }
     setPasarSituacion(true)
 }
@@ -264,13 +270,19 @@ const handleOpcionB = () => {
     setNumSituacion(numSituacion + 1);
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["B"][0]);
-    setEmpleados(empleados + variaciones[numSituacion]["B"][1])
-    if (empleados < 0) {
+    if (empleados + variaciones[numSituacion]["B"][1] < 0) {
         setEmpleados(0)
     }
-    setInversores(inversores + variaciones[numSituacion]["B"][2])
-    if (inversores < 0) {
+    else
+    {
+        setEmpleados(empleados + variaciones[numSituacion]["B"][1])
+    }
+    if (inversores + variaciones[numSituacion]["B"][2] < 0) {
         setInversores(0)
+    }
+    else
+    {
+        setInversores(inversores + variaciones[numSituacion]["B"][2])
     }
     setPasarSituacion(true)
 }
@@ -278,13 +290,19 @@ const handleOpcionC = () => {
     setNumSituacion(numSituacion + 1);
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["C"][0]);
-    setEmpleados(empleados + variaciones[numSituacion]["C"][1])
-    if (empleados < 0) {
+    if (empleados + variaciones[numSituacion]["C"][1] < 0) {
         setEmpleados(0)
     }
-    setInversores(inversores + variaciones[numSituacion]["C"][2])
-    if (inversores < 0) {
+    else
+    {
+        setEmpleados(empleados + variaciones[numSituacion]["C"][1])
+    }
+    if (inversores + variaciones[numSituacion]["C"][2] < 0) {
         setInversores(0)
+    }
+    else
+    {
+        setInversores(inversores + variaciones[numSituacion]["C"][2])
     }
     setPasarSituacion(true)
 }
@@ -325,7 +343,7 @@ const handleOpcionC = () => {
           </div>
       </div>
 
-        <div className="bg-white w-[54rem] h-[32rem] p-6 mt-0 ml-5 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
+        <div className="bg-white w-[54rem] h-[34rem] p-6 mt-0 ml-5 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
             <h1 className='text-3xl font-bold mb-4'>
                 {movimientos[numSituacion]['titulo']}
             </h1>
@@ -334,13 +352,13 @@ const handleOpcionC = () => {
             </h2>
             <div className='justify-items-center w-full h-4/5'>
                 <h3 className='ml-5 mt-5 mb-10 rounded-lg text-black text-2xl row-span-2 col-span-2'>
-                    Opción A: {movimientos[numSituacion]['opcionA']}
+                {numSituacion !== 16 ? `Opción A: ${movimientos[numSituacion]['opcionA']}` : ""}
                 </h3>
                 <h3 className='ml-5 mt-5 mb-10 rounded-lg text-black text-2xl row-span-2 col-span-2'>
-                    Opción B: {movimientos[numSituacion]['opcionB']}
+                {numSituacion !== 16 ? `Opción B: ${movimientos[numSituacion]['opcionB']}` : ""}
                 </h3>
                 <h3 className='ml-5 mt-5 mb-10 rounded-lg text-black text-2xl row-span-2 col-span-2'>
-                    Opción C: {movimientos[numSituacion]['opcionC']}
+                {numSituacion !== 16 ? `Opción C: ${movimientos[numSituacion]['opcionC']}` : ""}
                 </h3>
             </div>
         </div>
