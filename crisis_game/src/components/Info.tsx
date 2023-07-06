@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import datos  from '../../global.d.ts'
 
 
 const Info = () => {
@@ -13,22 +12,22 @@ const Info = () => {
         </div>
         <div className='pl-8 pt-5'>
                 <h2 className="text-2xl text-black pb-5">
-                    Dinero: ${datos[0]}
+                    Dinero: $100000
                 </h2>
                 <h2 className='text-2xl text-black pb-5'>
-                    Empleados: {datos[1]}
+                    Empleados: 80
                 </h2>
                 <h2 className='text-2xl text-black pb-5'>
-                    Inversores: {datos[2]}
+                    Inversores: 5
                 </h2>
-                {/* <h2 className='text-2xl text-black pb-5'>
+                {/* { <h2 className='text-2xl text-black pb-5'>
                     Ingresos: ${Ingresos}
-                </h2> */}
-                {/* <h2 className='text-2xl text-black pb-5'>
+                </h2> }
+                { <h2 className='text-2xl text-black pb-5'>
                     Sueldo Empleados: $1000
-                </h2> */}
+                </h2> } */}
         </div>
-    </div>
+   </div>
   )
 }
 export default Info
