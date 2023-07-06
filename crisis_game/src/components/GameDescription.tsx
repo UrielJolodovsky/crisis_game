@@ -2,7 +2,7 @@ import React from 'react';
 
 const GameDescription = () => {
   return (
-    <div className="bg-white h-3/5 p-6 mt-10 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
+    <div className="bg-white w-[56rem] h-[40rem] mr-5 p-6 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
       <h1 className="text-3xl font-bold mb-4">Bienvenido a Snow Adventure</h1>
       <p className="text-lg mb-6">
         Sumérgete en la experiencia de nuestro centro de Ski en San Martín de Los Andes, donde te espera una amplia variedad de actividades emocionantes en la nieve.

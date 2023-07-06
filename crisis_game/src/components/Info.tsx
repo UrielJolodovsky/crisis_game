@@ -1,30 +1,34 @@
 import React, { useState } from 'react'
+import datos  from '../../global.d.ts'
+
 
 const Info = () => {
-    const [dinero, setDinero] = useState(1000000)
-    const [cantEmpleados, setCantEmpleados] = useState(10)
-    const [cantInversores, setCantInversores] = useState(3)
-    const [Ingresos, setIngresos] = useState(0)
+
   return (
-    <div className='w-96 h-80 bg-white rounded-xl ml-10 hover:scale-105 col-span-2'>
+    <div className='w-96 h-80 bg-white rounded-xl hover:scale-105 col-span-2'>
         <div>
-            <h2 className='text-black font-bold text-2xl pl-10 pt-5'>
+            <h2 className='text-black font-bold text-2xl pl-5 pt-5'>
                 Información:
             </h2>
         </div>
-        <div className='pl-5 pt-6'>
+        <div className='pl-8 pt-5'>
                 <h2 className="text-2xl text-black pb-5">
-                    Dinero: ${dinero}
+                    Dinero: ${datos[0]}
                 </h2>
                 <h2 className='text-2xl text-black pb-5'>
-                    Cant. Empleados: {cantEmpleados}
+                    Empleados: {datos[1]}
                 </h2>
-                <h2 className='text-2xl text-black'>
-                    Cant. Inversores: {cantInversores}
+                <h2 className='text-2xl text-black pb-5'>
+                    Inversores: {datos[2]}
                 </h2>
+                {/* <h2 className='text-2xl text-black pb-5'>
+                    Ingresos: ${Ingresos}
+                </h2> */}
+                {/* <h2 className='text-2xl text-black pb-5'>
+                    Sueldo Empleados: $1000
+                </h2> */}
         </div>
     </div>
   )
 }
-
 export default Info
