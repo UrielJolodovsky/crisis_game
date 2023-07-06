@@ -251,7 +251,13 @@ const handleOpcionA = () => {
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["A"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["A"][1])
+    if (empleados < 0) {
+        setEmpleados(0)
+    }
     setInversores(inversores + variaciones[numSituacion]["A"][2])
+    if (inversores < 0) {
+        setInversores(0)
+    }
     setPasarSituacion(true)
 }
 const handleOpcionB = () => {
@@ -259,7 +265,13 @@ const handleOpcionB = () => {
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["B"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["B"][1])
+    if (empleados < 0) {
+        setEmpleados(0)
+    }
     setInversores(inversores + variaciones[numSituacion]["B"][2])
+    if (inversores < 0) {
+        setInversores(0)
+    }
     setPasarSituacion(true)
 }
 const handleOpcionC = () => {
@@ -267,11 +279,17 @@ const handleOpcionC = () => {
     setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["C"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["C"][1])
+    if (empleados < 0) {
+        setEmpleados(0)
+    }
     setInversores(inversores + variaciones[numSituacion]["C"][2])
+    if (inversores < 0) {
+        setInversores(0)
+    }
     setPasarSituacion(true)
 }
     return (
-        <main className='flex'>
+        <main className=''>
         <div className="w-full h-24 bg-blue align-middle pt-4">
             <div className="container mx-auto flex justify-around items-center">
                 <div className='border-solid border-2 rounded-lg align-middle hover:scale-110 cursor-pointer'>
@@ -307,7 +325,7 @@ const handleOpcionC = () => {
           </div>
       </div>
 
-        <div className="bg-white w-[54rem] h-96 p-6 mt-0 ml-5 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
+        <div className="bg-white w-[54rem] h-[32rem] p-6 mt-0 ml-5 rounded-lg shadow-lg items-center hover:scale-105 row-span-3">
             <h1 className='text-3xl font-bold mb-4'>
                 {movimientos[numSituacion]['titulo']}
             </h1>
