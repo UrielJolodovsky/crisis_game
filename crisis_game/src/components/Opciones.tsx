@@ -153,7 +153,16 @@ const Global = () => {
             opcionA: "Invertir en tecnología de realidad virtual para ofrecer experiencias inmersivas en la nieve.",
             opcionB: "Mantener nuestras actividades enfocadas en laexperiencia real de la nieve y la naturaleza.",
             opcionC: "Colaborar con empresas de tecnología de realidad virtual para desarrollar una atracción conjunta."
-          }
+          },
+          {
+            fecha: "6 de Julio de 2024",
+            titulo: "Felicidades llegaste al final del recorrido",
+            pregunta: "Esperamos que hayas disfrutado y sobre todo aprendido cómo sobreponerte a una crisis financiera.",
+            opcionA: "",
+            opcionB: "",
+            opcionC: ""
+          },
+
 ]
 const variaciones = [
     {
@@ -239,7 +248,7 @@ const variaciones = [
     ]
 const handleOpcionA = () => {
     setNumSituacion(numSituacion + 1);
-    setFecha(movimientos[numSituacion]["fecha"])
+    setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["A"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["A"][1])
     setInversores(inversores + variaciones[numSituacion]["A"][2])
@@ -247,7 +256,7 @@ const handleOpcionA = () => {
 }
 const handleOpcionB = () => {
     setNumSituacion(numSituacion + 1);
-    setFecha(movimientos[numSituacion]["fecha"])
+    setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["B"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["B"][1])
     setInversores(inversores + variaciones[numSituacion]["B"][2])
@@ -255,7 +264,7 @@ const handleOpcionB = () => {
 }
 const handleOpcionC = () => {
     setNumSituacion(numSituacion + 1);
-    setFecha(movimientos[numSituacion]["fecha"])
+    setFecha(movimientos[numSituacion + 1]["fecha"])
     setDinero(dinero + variaciones[numSituacion]["C"][0]);
     setEmpleados(empleados + variaciones[numSituacion]["C"][1])
     setInversores(inversores + variaciones[numSituacion]["C"][2])
